@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CountComponent } from './components/count/count.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountComponent
   ],
   imports: [
     BrowserModule,
