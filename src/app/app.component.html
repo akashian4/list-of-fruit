@@ -76,22 +76,51 @@
   </li>
 </ul> -->
 
-<hr>
-<p style="font-size: 30px;direction: rtl; ">تعداد کل : {{countAll}}</p>
 
-<ul class="list-group">
-  <li *ngFor="let i of data" class="list-group-item">
-    <div class="row">
-      <div class="col-md-2">
-        <img src="{{i.link}}" class="img-circle " alt="Cinque Terre" style="width: 100px; height: 100px;">
+<h1>پروژه لیست میوه</h1>
+<hr>
+
+<form (ngSubmit)="save()" [formGroup]="list_form">
+  <div class="row">
+
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" placeholder="link" name="link" [formControl]="link">
+    </div>
+
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" placeholder="name" name="name" [formControl]="name">
+    </div>
+
+    <div class="form-group col-md-4">
+      <input type="submit" class="btn btn-success" value="Save" [disabled]="!list_form.valid" />
+    </div>
+
+  </div>
+
+</form>
+
+
+
+<hr>
+<p>تعداد کل : {{countAll}}</p>
+
+<ul class=" list-group ">
+  <li *ngFor=" let i of data " class=" list-group-item ">
+    <div class=" row ">
+      <div class=" col-md-2 ">
+        <img src="{{i.link}}" class=" img-circle " alt=" Cinque Terre ">
       </div>
-      <div class="col-md-6">
+      <div class=" col-md-6">
         <br>
-        <p style="font-size: 30px;">{{i.name}} </p>
+        <p>{{i.name}} </p>
       </div>
-      <div class="col-md-4">
-        <app-count (onIncrease)="productCountIncreased()" (onDecrease)="productCountDecreased()"></app-count >
+      <div class=" col-md-2">
+        <app-count (onIncrease)="productCountIncreased()" (onDecrease)="productCountDecreased()"></app-count>
       </div>
+      <div class=" col-md-2">
+        <br>
+          <button class="btn" (click)="Delete()"><i class="glyphicon glyphicon-trash" ></i></button>
+        </div>
     </div>
   </li>
 </ul>
