@@ -28,14 +28,14 @@
 <p>تعداد کل : {{countAll}}</p>
 
 <ul class=" list-group ">
-  <li *ngFor=" let i of data " class=" list-group-item ">
+  <li *ngFor=" let index of data " class=" list-group-item ">
     <div class=" row ">
       <div class=" col-md-2 ">
-        <img src="{{i.link}}" class=" img-circle " alt=" Cinque Terre ">
+        <img src="{{index.link}}" class=" img-circle " alt=" Cinque Terre ">
       </div>
       <div class=" col-md-6">
         <br>
-        <p>{{i.name}} </p>
+        <p>{{index.name}} </p>
       </div>
       <div class=" col-md-2">
         <app-count (onIncrease)="productCountIncreased()" (onDecrease)="productCountDecreased()"></app-count>
