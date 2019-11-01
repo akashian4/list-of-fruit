@@ -1,0 +1,17 @@
+[33mcommit eca2a7b41ac38cd851fd44d49f7ab1c6b7eea7a6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: abolfazl <akashian4@gmail.com>
+Date:   Mon Oct 21 22:09:24 2019 +0330
+
+    order style of tags and add form for add item to list and add icon for delete item (but this have bug)
+
+[33mcommit b21ea67fce9f8f10df2a67a7083053222d44008f[m
+Author: abolfazl <akashian4@gmail.com>
+Date:   Mon Oct 21 18:25:49 2019 +0330
+
+    first commit
+
+[33mcommit 3d015feeab1dab3c8d8930e59895e0108c6615c3[m
+Author: abolfazl <akashian4@gmail.com>
+Date:   Mon Oct 21 13:37:17 2019 +0330
+
+    initial commit

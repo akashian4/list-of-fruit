@@ -65,7 +65,8 @@ export class AppComponent {
       name: this.list_form.value.name
     });
   }
-  Delete(){
-    this.data.pop();
+  Delete(index){
+    this.data.splice(this.data.indexOf(index),1);
+    
   }
 }
