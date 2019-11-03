@@ -1,15 +1,31 @@
-<div class="row">
-    <div class="col-md-3">
-        <div class="row">
-            <button class="btn" (click)="Increment()"><i class="glyphicon glyphicon-plus plus"></i></button>
+<li *ngFor=" let index of data " class=" list-group-item ">
+    <div class=" row ">
+        <div class=" col-md-2 ">
+            <img src="{{index.link}}" class=" img-circle " alt=" Cinque Terre ">
         </div>
-        <br>
-        <div class="row">
-            <button class="btn" (click)="Decrement()"><i class="glyphicon glyphicon-minus minus" ></i></button>
+        <div class=" col-md-6">
+            <br>
+            <p>{{index.name}} </p>
+           
+        </div>
+
+        <div class="col-md-1">
+            <div class="row">
+                <button class="btn" (click)="Increment(index)"><i class="glyphicon glyphicon-plus plus"></i></button>
+            </div>
+            <br>
+            <div class="row">
+                <button class="btn" (click)="Decrement(index)"><i class="glyphicon glyphicon-minus minus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-1 ">
+            <br>
+            <p>{{index.counter}}</p>
+        </div>
+
+        <div class=" col-md-2">
+            <br>
+            <button class="btn" (click)="Delete(index)"><i class="glyphicon glyphicon-trash"></i></button>
         </div>
     </div>
-    <div class="col-md-3 ">
-        <br>
-        <p >{{counter}}</p>
-    </div>
-</div>
+</li>

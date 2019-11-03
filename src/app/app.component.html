@@ -28,22 +28,7 @@
 <p>تعداد کل : {{countAll}}</p>
 
 <ul class=" list-group ">
-  <li *ngFor=" let index of data " class=" list-group-item ">
-    <div class=" row ">
-      <div class=" col-md-2 ">
-        <img src="{{index.link}}" class=" img-circle " alt=" Cinque Terre ">
-      </div>
-      <div class=" col-md-6">
-        <br>
-        <p>{{index.name}} </p>
-      </div>
-      <div class=" col-md-2">
-        <app-count (onIncrease)="productCountIncreased()" (onDecrease)="productCountDecreased()"></app-count>
-      </div>
-      <div class=" col-md-2">
-        <br>
-          <button class="btn" (click)="Delete(index)"><i class="glyphicon glyphicon-trash" ></i></button>
-        </div>
-    </div>
-  </li>
+  
+        <app-count (onIncrease)="productCountIncreased()" (onDecrease)="productCountDecreased()"  (onDelete)="onchangecount($event)"></app-count>
+    
 </ul>
