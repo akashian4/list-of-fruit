@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url(..\asset\pic2.jpg);
+    background-attachment: fixed;
+    background-position: 10%;
+    background-size: cover;
+    
+  }
+  .nv{
+      margin-left: 60px;
+  }
+  
+  .logo{
+      font-size: 27px;
+  }
+  
