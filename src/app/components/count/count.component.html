@@ -2,7 +2,7 @@
 <li *ngFor=" let index of data " class=" list-group-item ">
     <div class=" row ">
         <div class=" col-md-2 ">
-            <img src="{{index.link}}" class=" img-circle " alt=" Cinque Terre ">
+            <img src="{{index.link}}" class=" rounded-circle list_item" alt=" Cinque Terre ">
         </div>
         <div class=" col-md-6">
             <br>
@@ -12,21 +12,23 @@
 
         <div class="col-md-1">
             <div class="row">
-                <button class="btn" (click)="Increment(index)">plus</button>
+                <button class="btn" (click)="Increment(index)"><img src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/04-512.png" alt="plus" id="plus_btn"></button>
             </div>
+            
             <br>
             <div class="row">
-                <button class="btn" (click)="Decrement(index)">minus</button>
+                <button class="btn" (click)="Decrement(index)"><img src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/05-512.png" alt="minus" id="minus_btn"></button>
             </div>
         </div>
         <div class="col-md-1 ">
             <br>
-            <p>{{index.counter}}</p>
+            <br>
+            <p id="counter">{{index.counter}}</p>
         </div>
 
         <div class=" col-md-2">
             <br>
-            <button class="btn" (click)="Delete(index)">delete</button>
+            <button class="btn" (click)="Delete(index)"><img src="https://cdn1.iconfinder.com/data/icons/ui-5/502/trash-512.png" alt="delete" id="delete_btn"></button>
         </div>
     </div>
 </li>

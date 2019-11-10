@@ -1,15 +1,35 @@
-p{
-    font-size: 30px;
+p {
+  font-size: 30px;
 }
 
-i.plus{
-    color: green;
+i.plus {
+  color: green;
 }
 
-i.minus{
-    color: red;
+i.minus {
+  color: red;
 }
-img {
-    width: 100px;
-    height: 100px;
-  }
+img.list_item {
+  width: 130px;
+  height: 130px;
+  border: 2px solid green;
+}
+#plus_btn,
+#minus_btn {
+  width: 60%;
+  height: 60%;
+}
+#delete_btn {
+  width: 40%;
+  height: 40%;
+}
+#counter {
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 15px;
+  margin: 8px;
+}
+li {
+  background: rgba(255, 254, 254, 0.856);
+  border: .2px solid gray;
+}

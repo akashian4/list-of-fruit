@@ -14,4 +14,7 @@ p {
   h1{
       direction: rtl;
   }
-  
+  .text-logo{
+      margin-right: 100px;
+      color: rgba(165, 241, 50, 0.733);
+  }
