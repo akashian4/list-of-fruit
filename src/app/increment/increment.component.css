@@ -1,3 +1,9 @@
-div.form{
-    margin: 40px;
+div.form {
+  margin: 40px;
+}
+.ng-valid:not(form){
+  border: 3px solid green;
+}
+.ng-invalid:not(form)[class~=ng-touched]{
+    border: 2px solid red;
 }
