@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {
+  FormControl,
+  Validators,
+  FormGroup,
+  FormBuilder
+} from '@angular/forms';
 
 @Component({
   selector: 'app-increment',
@@ -6,10 +12,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./increment.component.css']
 })
 export class IncrementComponent implements OnInit {
+  link = new FormControl('', [Validators.required]);
+  name = new FormControl('', [Validators.required]);
+  list_form: FormGroup = this.builder.group({
+    link: this.link,
+    name: this.name
+  });
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private builder: FormBuilder) {}
+  
+  save() {
+   
+    // this.CountComponent.data.push({
+    //   link: this.list_form.value.link,
+    //   name: this.list_form.value.name,
+    //   counter: 0
+    // });
   }
 
+  ngOnInit() {}
 }

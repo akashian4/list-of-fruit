@@ -7,29 +7,20 @@ import {ReactiveFormsModule} from '@angular/forms'
 import { CountComponent } from './components/count/count.component';
 import { IncrementComponent } from './increment/increment.component';
 import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
-
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'count', component: CountComponent },
-  { path: 'increment', component: IncrementComponent },
-];
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountComponent,
     IncrementComponent,
-    HomeComponent
+    HomeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
-    )
   ],
   providers: [],
   bootstrap: [AppComponent]
