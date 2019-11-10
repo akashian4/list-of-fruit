@@ -12,17 +12,24 @@ import {
   styleUrls: ['./increment.component.css']
 })
 export class IncrementComponent implements OnInit {
-  link = new FormControl('', [Validators.required]);
-  name = new FormControl('', [Validators.required]);
+  link = new FormControl('', [
+    Validators.required,
+    Validators.min(3),
+    Validators.max(20)
+  ]);
+  name = new FormControl('', [
+    Validators.required,
+    Validators.min(3),
+    Validators.max(20)
+  ]);
   list_form: FormGroup = this.builder.group({
     link: this.link,
     name: this.name
   });
 
   constructor(private builder: FormBuilder) {}
-  
+
   save() {
-   
     // this.CountComponent.data.push({
     //   link: this.list_form.value.link,
     //   name: this.list_form.value.name,
