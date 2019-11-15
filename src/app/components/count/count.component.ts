@@ -1,15 +1,17 @@
 import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
+import { BrowserstorageService } from 'src/app/browserstorage.service';
 
 @Component({
   selector: 'app-count',
   templateUrl: './count.component.html',
-  styleUrls: ['./count.component.css']
+  styleUrls: ['./count.component.css'],
+  providers: [BrowserstorageService]
 })
 export class CountComponent implements OnInit {
   data: any[];
 
 
-  constructor() {
+  constructor(private browserStorage: BrowserstorageService) {
     
     this.data = [
       {
@@ -37,10 +39,14 @@ export class CountComponent implements OnInit {
         counter:0
       }
     ];
+    var list_item=this.browserStorage.getLocal('list_item');
+    if(list_item!=null){
+      this.data.push(this.browserStorage.getLocal('list_item'));
+    }
+    console.log(this.browserStorage.getLocal('list_item'));
   }
 
   Increment(index) {
-    
     index.counter++;
     console.log(index.counter);
     this.onIncrease.emit(index.counter);
@@ -58,10 +64,11 @@ export class CountComponent implements OnInit {
   @Output() onDelete:EventEmitter<any> = new EventEmitter<any>();
   Delete(index){
     this.onDelete.emit(index.counter);
-
     this.data.splice(this.data.indexOf(index),1);
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    
+  }
 
 }
