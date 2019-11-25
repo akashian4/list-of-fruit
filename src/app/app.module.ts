@@ -8,6 +8,7 @@ import { CountComponent } from './components/count/count.component';
 import { IncrementComponent } from './increment/increment.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
+import { DetailsProductComponent } from './details-product/details-product.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductComponent } from './product/product.component';
     CountComponent,
     IncrementComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    DetailsProductComponent
   ],
   imports: [
     BrowserModule,
