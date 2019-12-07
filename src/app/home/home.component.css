@@ -4,3 +4,16 @@ h1{
     padding: 20px;
     border: 2px solid white;
 }
+a{
+    margin: 0px 30px;
+}
+
+.more{
+    padding: 10px;
+    background-color: rgba(2, 2, 2, 0.616);
+}
+p{
+    display: inline-block;
+    
+    font-size: 30px;
+}

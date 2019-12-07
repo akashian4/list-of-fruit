@@ -1,12 +1,11 @@
-
-
 <hr>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
   <a class="navbar-brand mr-auto mr-lg-0 logo" href="#">ارتباط پرداز آیریک</a>
   <div class="navbar-collapse offcanvas-collapse nv">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">home</a>
+        <a class="nav-link" routerLink="/" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/count" routerLinkActive="active">product</a>
@@ -23,10 +22,13 @@
   <h1 class="text-logo">میوه فروشی آنلاین</h1>
 </nav>
 
-<router-outlet></router-outlet>
+
 <div>
   <div class="row">
-    <nav class="col-md-2 d-none d-md-block bg-light sidebar container-fluid">
+    <div class="col-md-11 container">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- <nav class="col-md-4 d-none d-md-block bg-light sidebar container-fluid">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -173,11 +175,8 @@
           </li>
         </ul>
       </div>
-    </nav>
-    <div class="col-md-9 container">
-      <router-outlet></router-outlet>
-      
-    </div>
+    </nav> -->
+
 
   </div>
 </div>

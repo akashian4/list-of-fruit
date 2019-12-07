@@ -72,4 +72,6 @@ export class CountComponent implements OnInit {
     var id=this.data.indexOf(index);
     this.router.navigate([`/count/${this.data[id].name}/${this.data[id].counter}`]);
   }
+  
+   
 }

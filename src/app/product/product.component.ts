@@ -25,5 +25,7 @@ export class ProductComponent implements OnInit {
   
   ngOnInit() {
   }
-
+  onLoad($event){
+    console.log(event);
+  }
 }

@@ -1,24 +1,29 @@
-
 <li *ngFor=" let index of data " class=" list-group-item ">
     <div class=" row ">
         <div class=" col-2 ">
-            <img src="{{index.link}}" class=" rounded-circle list_item" alt=" Cinque Terre ">
+            <!-- <a [routerLink]="[{ outlets: { imgAbout: ['count'] } }]" (click)="onclick(index.link)"> -->
+                <img src="{{index.link}}" class=" rounded-circle list_item" alt=" Cinque Terre ">
+            <!-- </a> -->
         </div>
         <div class=" col-6">
             <br>
             <p>{{index.name}} </p>
-           <!-- <p><a [routerLink]="['/count',this.data.indexOf(index)]">detalis</a></p> -->
-           <button class="btn btn-primary" (click)="onLoadDetails(index)">more ..</button>
+            <!-- <p><a [routerLink]="['/count',this.data.indexOf(index)]">detalis</a></p> -->
+            <button class="btn btn-primary" >more ..</button>
         </div>
 
         <div class="col-1">
             <div class="row">
-                <button class="btn" (click)="Increment(index)"><img src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/04-512.png" alt="plus" id="plus_btn"></button>
+                <button class="btn" (click)="Increment(index)"><img
+                        src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/04-512.png" alt="plus"
+                        id="plus_btn"></button>
             </div>
-            
+
             <br>
             <div class="row">
-                <button class="btn" (click)="Decrement(index)"><img src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/05-512.png" alt="minus" id="minus_btn"></button>
+                <button class="btn" (click)="Decrement(index)"><img
+                        src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/05-512.png" alt="minus"
+                        id="minus_btn"></button>
             </div>
         </div>
         <div class="col-1 ">
@@ -29,7 +34,9 @@
 
         <div class=" col-2">
             <br>
-            <button class="btn" (click)="Delete(index)"><img src="https://cdn1.iconfinder.com/data/icons/ui-5/502/trash-512.png" alt="delete" id="delete_btn"></button>
+            <button class="btn" (click)="Delete(index)"><img
+                    src="https://cdn1.iconfinder.com/data/icons/ui-5/502/trash-512.png" alt="delete"
+                    id="delete_btn"></button>
         </div>
     </div>
 </li>

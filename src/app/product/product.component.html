@@ -1,10 +1,13 @@
 <div id="counterAll">
-        <p >تعداد کل : {{countAll}}</p>
+        <p>تعداد کل : {{countAll}}</p>
 </div>
 
 
-<ul class=" list-group ">
-  
-        <app-count (onIncrease)="productCountIncreased()" (onDecrease)="productCountDecreased()"  (onDelete)="onchangecount($event)" ></app-count>
-    
-</ul>
+<div class="row">
+        <div class="col-12">
+                <ul class=" list-group ">
+                        <app-count (onIncrease)="productCountIncreased()" (onDecrease)="productCountDecreased()"
+                                (onDelete)="onchangecount($event)"></app-count>
+                </ul>
+        </div>
+</div>

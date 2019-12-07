@@ -1,4 +1,11 @@
 <hr>
+<p>select your nested:</p>
 <hr>
+<div class="row">
+        <a class="btn btn-success" [routerLink]="['/1']" routerLinkActive="active">nested 1</a>
+        <a class="btn btn-success" [routerLink]="['/2']" routerLinkActive="active">nested 2</a>
+</div>
 <hr>
-<h1>this is home components</h1>
+<h1>
+    <router-outlet></router-outlet>
+</h1>

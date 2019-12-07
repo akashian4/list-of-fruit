@@ -9,6 +9,9 @@ import { IncrementComponent } from './increment/increment.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { DetailsProductComponent } from './details-product/details-product.component';
+import { Nested1Component } from './nested1/nested1.component';
+import { Nested2Component } from './nested2/nested2.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { DetailsProductComponent } from './details-product/details-product.compo
     IncrementComponent,
     HomeComponent,
     ProductComponent,
-    DetailsProductComponent
+    DetailsProductComponent,
+    Nested1Component,
+    Nested2Component,
+    
   ],
   imports: [
     BrowserModule,
